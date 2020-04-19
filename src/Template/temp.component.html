@@ -1,0 +1,45 @@
+<h2>Simple GET API</h2>
+<table>
+
+<tr>
+    <th>id</th>
+    <th>UserId</th>
+    <th>title</th>
+    <th>Body</th>
+
+</tr>
+<tr *ngFor="let com of lstcomments">
+    <td>{{com.id}}</td>
+    <td>{{com.userId}}</td>
+    <td>{{com.title}}</td>
+    <td>{{com.body}}</td>
+</tr>
+
+
+</table>
+
+<h2>Simple GET API With Parameter</h2>
+<table>
+
+<tr>
+    <th>id</th>
+    <th>UserId</th>
+    <th>title</th>
+    <th>Body</th>
+
+</tr>
+<tr *ngFor="let pos of lstposts">
+    <td>{{pos.id}}</td>
+    <td>{{pos.userId}}</td>
+    <td>{{pos.title}}</td>
+    <td>{{pos.body}}</td>
+</tr>
+
+
+</table>
+<h3>Posts Data Returned</h3>
+
+<p>id::{{objPosts?.id}}</p>
+<p>userId::{{objPosts?.userId}}</p>
+<p>Title::{{objPosts?.title}}</p>
+<p>Body::{{objPosts?.body}}</p>
