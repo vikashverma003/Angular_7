@@ -1,1 +1,6 @@
 <p>department-list works!</p>
+<ul class="items">
+    <li (click)="onSelect(department)" *ngFor="let department of departments"  [class.selected]="isSelected(department)">
+      <span class="badge">{{department.id}}</span> {{department.name}}
+    </li>
+</ul>

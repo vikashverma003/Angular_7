@@ -1,0 +1,4 @@
+items li.selected:hover {
+    background-color: #BBD8DC;
+    color: white;
+  }
