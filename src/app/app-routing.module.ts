@@ -20,6 +20,12 @@ const routes: Routes = [
   loadChildren:'./product/product.module#ProductModule'
 
 }, */
+
+{
+  path:'',
+  redirectTo:'/product',
+  pathMatch:"full"
+},
 {
   path:'add',
  // redirectTo: '/route1',
