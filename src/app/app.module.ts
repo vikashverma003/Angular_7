@@ -6,14 +6,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import {freeApiService} from '../Services/freeApiService';
 import { HttpClientModule } from '@angular/common/http';
-import { ListComponent } from './product/list/list.component';
-import { HomeComponent } from './product/home/home.component';
-import { AddComponent } from './product/add/add.component';
+import { DepartmentListComponent } from './department-list/department-list.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent,ListComponent,HomeComponent,AddComponent
+    AppComponent,RoutingComponent, DepartmentListComponent, EmployeeListComponent, PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
