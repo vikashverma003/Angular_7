@@ -5,6 +5,13 @@ import {ActivatedRoute,Router,ParamMap } from '@angular/router'
   selector: 'app-department-detail',
   template:`
   <h3>You selected department with id = {{deparmentId}}</h3>
+
+  <p>
+  <button (click)="showOverview()">overview</button>
+  <button (click)="showContact()">contact</button>
+
+  
+  </p>
   
   <p>
     <button (click)="goPrevious()">Previous</button>
@@ -23,6 +30,7 @@ export class DepartmentDetailComponent implements OnInit {
   constructor(private route:ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
+    /* Herer we are reading id from the url */
     //let id=parseInt(this.route.snapshot.paramMap.get('id'));
     this.route.paramMap.subscribe((params: ParamMap) => {
       let id = parseInt(params.get('id'));
@@ -46,12 +54,23 @@ export class DepartmentDetailComponent implements OnInit {
 
   } 
 
-  /* for passing the optional parameters */
+  /* for passing the optional parameters in the (url) */
   gotoDepartments(){
     let selectedId = this.deparmentId ? this.deparmentId : null;
     this.router.navigate(['/department-list', {id: selectedId}]);
-
+  // this.router.navigate(['../', {id:selectedId}], {relativeTo:this.route});
 
   }
 
+  showOverview(){
+
+    this.router.navigate(['overview'], {relativeTo:this.route});
+
+  }
+
+  showContact(){
+
+    this.router.navigate(['contact'], {relativeTo:this.route});
+
+  }
 }

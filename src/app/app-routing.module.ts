@@ -8,6 +8,8 @@ import { DepartmentListComponent } from './department-list/department-list.compo
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DepartmentDetailComponent } from './department-detail/department-detail.component';
+import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
+import { DepartmentContactComponent } from './department-contact/department-contact.component';
 
 const routes: Routes = [
 
@@ -56,7 +58,21 @@ const routes: Routes = [
 },
 {
   path:'department-list/:id',
-  component:DepartmentDetailComponent
+  component:DepartmentDetailComponent,
+  children:[
+    {
+      path:'overview',
+      component:DepartmentOverviewComponent
+    },
+    {
+
+      path:'contact',
+      component:DepartmentContactComponent
+
+    }
+
+
+  ]
   
 },
 
@@ -65,6 +81,7 @@ const routes: Routes = [
   component:EmployeeListComponent
  },
  {
+   /* for handling the invalid routes or defining the wildcard routes */
    path:"**",
    component:PageNotFoundComponent
  }
@@ -78,5 +95,7 @@ const routes: Routes = [
 })
 //export class AppRoutingModule { }
 export class AppRoutingModule { } 
-export const RoutingComponent = [HomeComponent,ListComponent,AddComponent,ViewComponent, DepartmentListComponent,EmployeeListComponent,PageNotFoundComponent];
+
+/* by defining the routes here we do not need to define the compo in app.module.ts */
+export const RoutingComponent = [HomeComponent,ListComponent,AddComponent,ViewComponent, DepartmentListComponent,EmployeeListComponent,PageNotFoundComponent,DepartmentOverviewComponent,DepartmentContactComponent];
 
