@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute,Router,ParamMap } from '@angular/router'
 
+
 @Component({
   selector: 'app-department-detail',
   template:`
@@ -12,6 +13,7 @@ import {ActivatedRoute,Router,ParamMap } from '@angular/router'
 
   
   </p>
+
   
   <p>
     <button (click)="goPrevious()">Previous</button>

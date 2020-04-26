@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ParentComponent} from '../parent/parent.component';
 
 @Component({
   selector: 'app-employee-list',

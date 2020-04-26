@@ -1,0 +1,65 @@
+<!-- Image and text -->
+<p>factorial of 6 is {{6|factorial}}</p>
+<div class="row content">
+  <div class="col-sm-12">
+      <router-outlet></router-outlet>
+  </div>
+</div>
+
+<div class="row header">
+    <div class="col-sm">
+      <h4>Products</h4>
+    </div>
+  </div>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Created_at</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of posts">
+          <td>{{product.id}}</td>
+          <td>{{product.name}}</td>
+        <td>{{product.description}}</td>
+        <td>{{product.created_at}}</td>
+     
+
+      </tr>
+      
+    </tbody>
+  </table>
+
+
+
+<div class="container">
+  <div class="blogs" [hidden]="showPostForm">
+    <div class="content-top">
+      <div class="blog-heading">
+          <h1>Blogs</h1>
+      </div>
+      <div class="blog-create-btn">
+      </div>
+    </div>
+  </div>
+  <div class="post-form" >
+      <h2>Create Post</h2>
+      <form (ngSubmit)="onSubmit()" #postForm="ngForm">
+        <div class="form-group">
+          <label for="title">Title: </label>
+          <input type="text" name="title" id="title" [(ngModel)]="blogpost.title">
+        </div>
+        <div class="form-group">
+            <label for="author">Description: </label>
+            <input type="text" name="description" id="description" [(ngModel)]="blogpost.description">
+          </div>
+        <div class="form-group"> <label>&nbsp;</label>
+          <button type="submit" [disabled]="!postForm.form.valid">Add Post</button>
+        </div>
+      </form>
+    </div>
+  {{error}}
+</div>

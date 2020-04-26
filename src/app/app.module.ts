@@ -11,13 +11,15 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
 import { DepartmentContactComponent } from './department-contact/department-contact.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { BlogpostComponent } from './Blogs/blogpost/blogpost.component';
+import { FactorialPipe } from './factorial.pipe';
+import { HighlightDirective } from './CustomDirective/highlight.directive';
 //import { DepartmentDetailComponent } from './department-detail/department-detail.component';
-
-
-
 @NgModule({
   declarations: [
-    AppComponent,RoutingComponent, DepartmentListComponent, EmployeeListComponent, PageNotFoundComponent, DepartmentOverviewComponent, DepartmentContactComponent
+    AppComponent,RoutingComponent, DepartmentListComponent, EmployeeListComponent, PageNotFoundComponent, DepartmentOverviewComponent, DepartmentContactComponent, ParentComponent, ChildComponent, BlogpostComponent, FactorialPipe, HighlightDirective
   ],
   imports: [
     BrowserModule,

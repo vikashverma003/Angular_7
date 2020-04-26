@@ -36,6 +36,5 @@ export class DepartmentListComponent implements OnInit {
    //this.router.navigate([department.id], {relativeTo:this.route});
 
   }
-
   isSelected(department) { return department.id === this.selectedId; }
 }

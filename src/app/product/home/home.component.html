@@ -1,2 +1,16 @@
 <p>home works!</p>
-<router-outlet></router-outlet>
+
+{{count}}
+<button  [disabled]="isDisabled" (click)="counter()">counter</button>
+<button (click)="reset()">Reset</button>
+<br />
+
+<h2 class="txtcolor" [ngClass]="currentClasses">Applying ng class directive </h2>
+
+<h2 [ngStyle]="currentStyles">Want to apply ng style directive</h2>
+<p><button (click)="setCurrentClasses()">Set the class</button></p>
+
+<p><button (click)="setCurrentStyles()">Set the inline styles</button></p>
+
+<div appHighlight class="box">Welcome to the boxer Realm</div>
+
